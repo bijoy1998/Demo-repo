@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thesis Final Report - AMR using YOLO-v7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+        header, section {
+            margin-bottom: 40px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .authors, .supervisor {
+            margin-bottom: 10px;
+        }
+        .abstract, .chapter, .references {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>AN END-TO-END AUTOMATIC METER READING SYSTEM USING YOLO-V7</h1>
+    <div class="supervisor"><strong>Supervisor:</strong> Md Osman Ali, Assistant Professor, Department of EEE, NSTU</div>
+    <div class="authors">
+        <p><strong>Candidate:</strong> Md. Shakil Ahamed, ID: ASH1817001M</p>
+        <p><strong>Candidate:</strong> Bijoy Saha, ID: ASH1817038M</p>
+    </div>
+    <p><em>This thesis is submitted in partial fulfilment of the requirements for the award of the degree of B.Sc. in Electrical and Electronic Engineering.</em></p>
+    <p>Department of Electrical and Electronic Engineering, Noakhali Science and Technology University, February 2023</p>
+</header>
+
+<section class="abstract">
+    <h2>Abstract</h2>
+    <p>In recent years, research on deep learning has grown dramatically in text detection, digit recognition, and counter-detection. We propose an Automatic Meter Reading (AMR) system using YOLO-v7 for object detection and OCR for digit recognition. This system captures meter readings via webcam, processes them, and sends data to an IoT platform for real-time monitoring by users and power companies.</p>
+</section>
+
+<section class="chapter">
+    <h2>Chapter 1: Introduction</h2>
+    <h3>1.1 Background</h3>
+    <p>In Bangladesh, many meters are still post-paid. Manual readings are time-consuming and error-prone. This project aims to automate the process using computer vision and deep learning.</p>
+
+    <h3>1.2 Problem Statement</h3>
+    <p>Consumers must manually send their meter readings. A camera-based solution with automatic processing can significantly reduce human involvement.</p>
+
+    <h3>1.3 Objectives</h3>
+    <ul>
+        <li>To develop an AMR system using YOLO-v7.</li>
+        <li>To minimize human labor through automation.</li>
+        <li>To use IoT for real-time access by consumers and providers.</li>
+    </ul>
+</section>
+
+<section class="chapter">
+    <h2>Chapter 2: Literature Review</h2>
+    <p>Summarizes previous work on AMR, OCR, and image processing. Reviews segmentation-based and segmentation-free models, and compares tools like Tesseract vs CNNs.</p>
+</section>
+
+<section class="chapter">
+    <h2>Chapter 3: Methodology</h2>
+    <ul>
+        <li><strong>Tools:</strong> Python, PyTorch, EasyOCR, Roboflow</li>
+        <li><strong>Dataset:</strong> Paraná-AMR (2239 images), augmented to ~4400 samples</li>
+        <li><strong>Model:</strong> YOLOv7 pretrained on COCO, retrained for kWh/meter detection</li>
+        <li><strong>OCR:</strong> EasyOCR for digit recognition</li>
+        <li><strong>IoT:</strong> Data sent to a cloud platform for live monitoring</li>
+    </ul>
+</section>
+
+<section class="chapter">
+    <h2>Chapter 4: Results</h2>
+    <p><strong>Counter detection:</strong> Precision: 91.2% (kWh), 91.4% (meter no); Recall: 92.4%, 89.7%</p>
+    <p><strong>Digit recognition:</strong> Successfully applied EasyOCR on detected boxes.</p>
+</section>
+
+<section class="chapter">
+    <h2>Conclusion</h2>
+    <p>This work demonstrated an efficient and accurate AMR system using YOLOv7 and OCR. It reduces labor and enables real-time usage tracking, offering a viable alternative for widespread implementation in regions with analog meters.</p>
+</section>
+
+<section class="references">
+    <h2>References</h2>
+    <ol>
+        <li>Salomon, G. et al. (2020). Deep Learning for Image-based AMR...</li>
+        <li>Khunsamitpanya, R. et al. (2021). The Energy Meter Translation...</li>
+        <li>And more as listed in the original document...</li>
+    </ol>
+</section>
+
+</body>
+</html>
