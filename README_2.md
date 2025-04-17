@@ -2,4 +2,4 @@
 
 ## Description
 
-This is my first project in GitHub.
+This is my first project on GitHub.
